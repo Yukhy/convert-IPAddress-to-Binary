@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IP address and Binary Data Converter</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="convert.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>IP address and Binary Data Converter</h1>
+    </header>
+    <div class="main">
+        <div class="contents ip">
+            <h2>IP Address</h2>
+            <div class="input">
+                <p class="ipsp"><input id="ip_address" type="text" placeholder="xxx.xxx.xxx.xxx">
+                <select id="host_part">
+                    <option value="0_1_1">/1</option>
+                    <option value="0_2_2">/2</option>
+                    <option value="0_3_3">/3</option>
+                    <option value="0_4_4">/4</option>
+                    <option value="0_5_5">/5</option>
+                    <option value="0_6_6">/6</option>
+                    <option value="0_7_7">/7</option>
+                    <option value="1_0_8">/8</option>
+                    <option value="1_1_9">/9</option>
+                    <option value="1_2_10">/10</option>
+                    <option value="1_3_11">/11</option>
+                    <option value="1_4_12">/12</option>
+                    <option value="1_5_13">/13</option>
+                    <option value="1_6_14">/14</option>
+                    <option value="1_7_15">/15</option>
+                    <option value="2_0_16">/16</option>
+                    <option value="2_1_17">/17</option>
+                    <option value="2_2_18">/18</option>
+                    <option value="2_3_19">/19</option>
+                    <option value="2_4_20">/20</option>
+                    <option value="2_5_21">/21</option>
+                    <option value="2_6_22">/22</option>
+                    <option value="2_7_23">/23</option>
+                    <option value="3_0_24" selected>/24</option>
+                    <option value="3_1_25">/25</option>
+                    <option value="3_2_26">/26</option>
+                    <option value="3_3_27">/27</option>
+                    <option value="3_4_28">/28</option>
+                    <option value="3_5_29">/29</option>
+                    <option value="3_6_30">/30</option>
+                    <option value="3_7_31">/31</option>
+                    <option value="4_0_32">/32</option>
+                </select>
+            </p>
+            </div>
+
+        </div>
+        <div class="contents binary">
+            <h2>Binary Address</h2>
+            <div class="input">
+                <input id="binary_address" type="text" placeholder="xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx">
+            </div>
+        </div>
+    </div>
+    <div class="convert">
+        <button onclick="select_address()">Convert !</button>
+    </div>
+    <div class="answer">
+        <div class="detail">
+            <p>IP address : <span id="IP">xxx.xxx.xxx.xxx.</span></p>
+            <div class="button">
+                <button onclick="copyToClipboardIP()">Copy</button>
+            </div>
+            <hr>
+            <p>Binary address : <span id="Bi">xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx</span></p><div class="button"><button onclick="copyToClipboardBi()">Copy</button></div>
+            <hr>
+            <p>Network address : <span id="net">xxx.xxx.xxx.</span></p><div class="button"><button onclick="copyToClipboardNet()">Copy</button></div>
+            <hr>
+            <p>IP host address : <span id="from">[from] xxx.xxx.xxx.xxx.</span></p><p class="kara"> ~ </p><p><span id="to">[to] xxx.xxx.xxx.xxx.</span></p><div class="button"><button onclick="copyToClipboardFrom()">Copy[From]</button><button onclick="copyToClipboardTo()">Copy[To]</button></div>
+            <hr>
+            <p>Broadcast address : <span id="broad">xxx.xxx.xxx.xxx.</span></p><div class="button"><button onclick="copyToClipboardBroad()">Copy</button></div>
+            <hr>
+            <p>Subnet mask : <span id="sub">xxx.xxx.xxx.xxx.</span></p><div class="button"><button onclick="copyToClipboardsub()">Copy</button></div>
+            <hr>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright©　2019- Ryuta Noguchi</p>
+        <p>Created by Ryuta Noguchi / Designed by Yukihiro Kozai</p>
+    </footer>
+
+</body>
+
+</html>
